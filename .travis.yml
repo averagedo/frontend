@@ -6,4 +6,4 @@ before_install:
   - docker build -t averagedo/frontend -f Dockerfile.dev .
 
 script:
-  - docker run averagedo/frontend npm run test -- --coverage
+  - docker run -e CI=true averagedo/frontend npm run test -- --coverage
